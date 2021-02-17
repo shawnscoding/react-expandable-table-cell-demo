@@ -1,0 +1,44 @@
+.global {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.global table,
+td,
+th,
+tr,
+thead,
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.global table {
+  border-spacing: 0;
+  display: table;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.global th {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.global td {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.global th:last-child {
+  border-right: 0;
+}
+.global td:last-child {
+  border-right: 0;
+}
