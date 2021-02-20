@@ -7,9 +7,9 @@ const columns = [
   { label: "Name", id: "name" },
   { label: "Email", id: "email" },
   { label: "Department", id: "department" },
-  { label: "Age", id: "age" },
   { label: "Job Title", id: "jobTitle" },
   { label: "Address", id: "address" },
+  { label: "Age", id: "age" },
 ];
 
 const myData = [
@@ -19,7 +19,7 @@ const myData = [
     department: "Web Developerment",
     age: "25",
     jobTitle: "Full-stack developer",
-    address: "ABC street",
+    address: "ABC street, Some City in the USA",
     id: "1",
   },
   {
@@ -28,7 +28,7 @@ const myData = [
     department: "Web Developerment",
     age: "25",
     jobTitle: "Front-end developer",
-    address: "ABC street",
+    address: "ABC street, Some City in the UK",
     id: "2",
   },
   {
@@ -37,7 +37,7 @@ const myData = [
     department: "Web Developerment",
     age: "25",
     jobTitle: "Back-end developer",
-    address: "ABC street",
+    address: "ABC street, Some City in South Korea",
     id: "3",
   },
 ];
@@ -85,8 +85,7 @@ const Table = () => {
                       initialValue={initialValue}
                       onBlur={onBlur}
                       onChange={onChange}
-                      editOnOneClick={false}
-                      stylesOnEdit={{ maxWidth: 300 }}
+                      stylesOnEdit={{ maxWidth: 400 }}
                     />
                   </React.Fragment>
                 );
