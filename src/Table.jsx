@@ -4,14 +4,12 @@ import ExpandableCell from "react-expandable-table-cell";
 import "react-expandable-table-cell/dist/index.css";
 
 const columns = [
-  { label: "Name", accessor: "name", readOnly: true },
-  { label: "Email", accessor: "email", readOnly: true },
+  { label: "Name", accessor: "name" },
+  { label: "Email", accessor: "email" },
   { label: "Department", accessor: "department" },
   { label: "Job Title", accessor: "jobTitle" },
   { label: "Address", accessor: "address" },
   { label: "Age", accessor: "age" },
-  // default type is 'test'
-  // currently only number and text types are supported
 ];
 
 const myData = [
@@ -91,8 +89,8 @@ const Table = () => {
                       columnId={column.accessor}
                       initialValue={initialValue}
                       onBlur={onBlur}
+                      expandOnOneClick={true}
                       stylesOnEdit={{ maxWidth: 400 }}
-                      readOnly={column.readOnly}
                     />
                   </React.Fragment>
                 );
