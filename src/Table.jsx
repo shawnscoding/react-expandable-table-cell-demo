@@ -9,7 +9,7 @@ const columns = [
   { label: "Department", accessor: "department" },
   { label: "Job Title", accessor: "jobTitle" },
   { label: "Address", accessor: "address" },
-  { label: "Age", accessor: "age" },
+  { label: "Age", accessor: "age" }
 ];
 
 const myData = [
@@ -20,7 +20,7 @@ const myData = [
     age: "25",
     jobTitle: "Full-stack developer",
     address: "ABC street, Some City in the USA",
-    id: "1",
+    id: "1"
   },
   {
     name: "Josh",
@@ -29,7 +29,7 @@ const myData = [
     age: "25",
     jobTitle: "Front-end developer",
     address: "ABC street, Some City in the UK",
-    id: "2",
+    id: "2"
   },
   {
     name: "Michelle",
@@ -38,8 +38,8 @@ const myData = [
     age: "25",
     jobTitle: "Back-end developer",
     address: "ABC street, Some City in South Korea",
-    id: "3",
-  },
+    id: "3"
+  }
 ];
 
 const Table = () => {
