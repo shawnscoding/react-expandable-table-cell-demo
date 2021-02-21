@@ -89,6 +89,7 @@ const Table = () => {
                       columnId={column.accessor}
                       initialValue={initialValue}
                       onBlur={onBlur}
+                      stylesOnEdit={{ maxWidth: 400 }}
                     />
                   </React.Fragment>
                 );
