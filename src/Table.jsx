@@ -9,7 +9,9 @@ const columns = [
   { label: "Department", accessor: "department" },
   { label: "Job Title", accessor: "jobTitle" },
   { label: "Address", accessor: "address" },
-  { label: "Age", accessor: "age" },
+  { label: "Age", accessor: "age", type: "number" },
+  // default type is 'test'
+  // currently only number and text types are supported
 ];
 
 const myData = [
@@ -17,7 +19,7 @@ const myData = [
     name: "Shawn",
     email: "test11@test.com",
     department: "Web Developerment",
-    age: "25",
+    age: 25,
     jobTitle: "Full-stack developer",
     address: "ABC street, Some City in the USA",
     id: "1",
@@ -26,7 +28,7 @@ const myData = [
     name: "Josh",
     email: "test12@test.com",
     department: "Web Developerment",
-    age: "25",
+    age: 25,
     jobTitle: "Front-end developer",
     address: "ABC street, Some City in the UK",
     id: "2",
@@ -35,7 +37,7 @@ const myData = [
     name: "Michelle",
     email: "test13@test.com",
     department: "Web Developerment",
-    age: "25",
+    age: 25,
     jobTitle: "Back-end developer",
     address: "ABC street, Some City in South Korea",
     id: "3",
@@ -89,6 +91,8 @@ const Table = () => {
                       columnId={column.accessor}
                       initialValue={initialValue}
                       onBlur={onBlur}
+                      stylesOnEdit={{ maxWidth: 400 }}
+                      type={column.type}
                     />
                   </React.Fragment>
                 );
