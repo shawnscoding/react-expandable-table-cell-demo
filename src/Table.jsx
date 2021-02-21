@@ -9,7 +9,7 @@ const columns = [
   { label: "Department", accessor: "department" },
   { label: "Job Title", accessor: "jobTitle" },
   { label: "Address", accessor: "address" },
-  { label: "Age", accessor: "age" },
+  { label: "Age", accessor: "age", type: "number" },
 ];
 
 const myData = [
@@ -17,28 +17,28 @@ const myData = [
     name: "Shawn",
     email: "test11@test.com",
     department: "Web Developerment",
-    age: "25",
     jobTitle: "Full-stack developer",
     address: "ABC street, Some City in the USA",
     id: "1",
+    age: 25,
   },
   {
     name: "Josh",
     email: "test12@test.com",
     department: "Web Developerment",
-    age: "25",
     jobTitle: "Front-end developer",
     address: "ABC street, Some City in the UK",
     id: "2",
+    age: 25,
   },
   {
     name: "Michelle",
     email: "test13@test.com",
     department: "Web Developerment",
-    age: "25",
     jobTitle: "Back-end developer",
     address: "ABC street, Some City in South Korea",
     id: "3",
+    age: 25,
   },
 ];
 
@@ -88,7 +88,10 @@ const Table = () => {
                       rowId={row.id}
                       columnId={column.accessor}
                       initialValue={initialValue}
+                      onChange={onChange}
                       onBlur={onBlur}
+                      stylesOnEdit={{ maxWidth: 400 }}
+                      type={column.type}
                     />
                   </React.Fragment>
                 );
