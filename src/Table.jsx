@@ -10,7 +10,7 @@ const columns = [
   { label: "Department", accessor: "department" },
   { label: "Job Title", accessor: "jobTitle" },
   { label: "Address", accessor: "address" },
-  { label: "Age", accessor: "age", type: "number" }
+  { label: "Age", accessor: "age", type: "number" },
 ];
 
 const myData = [
@@ -21,7 +21,7 @@ const myData = [
     jobTitle: "Full-stack developer",
     address: "ABC street, Some City in the USA",
     id: "1",
-    age: 25
+    age: 25,
   },
   {
     name: "Josh",
@@ -30,7 +30,7 @@ const myData = [
     jobTitle: "Front-end developer",
     address: "ABC street, Some City in the UK",
     id: "2",
-    age: 25
+    age: 25,
   },
   {
     name: "Michelle",
@@ -39,17 +39,18 @@ const myData = [
     jobTitle: "Back-end developer",
     address: "ABC street, Some City in South Korea",
     id: "3",
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
 const Table = () => {
   const [data, setData] = React.useState(myData);
-  const onChange = (args) => {
-    // this is optional, expandable table cell internally updates its value when value changes
-  };
+  const onChange = React.useCallback((args) => {
+    // onChange is optional because expandable table cell internally updates the value when value change
+  }, []);
 
-  const onBlur = (args) => {
+  const onBlur = React.useCallback((args) => {
+    // useCallback is optional but highly encouraged as it prevents unnecessary rerender
     const { columnId, rowId, value, resetValue } = args;
     console.log(columnId, rowId, value);
     const validationFailed = false;
@@ -63,7 +64,7 @@ const Table = () => {
         row.id === rowId ? { ...row, [columnId]: value } : { ...row }
       );
     });
-  };
+  }, []);
 
   return (
     <div className={styles.global}>
@@ -91,7 +92,7 @@ const Table = () => {
                       initialValue={initialValue}
                       onChange={onChange}
                       onBlur={onBlur}
-                      stylesOnEdit={{ maxWidth: 400 }}
+                      maxWidth={400}
                       type={column.type}
                     />
                   </React.Fragment>
