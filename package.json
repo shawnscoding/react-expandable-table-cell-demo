@@ -9,7 +9,7 @@
     "immer": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-expandable-table-cell": "file:react-expandable-table-cell-1.0.0.tgz",
+    "react-expandable-table-cell": "0.1.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
