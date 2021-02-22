@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import ExpandableCell from "react-expandable-table-cell";
 import "react-expandable-table-cell/dist/index.css";
+// you can easily edit css in the css file above
 
 const columns = [
   { label: "Name", accessor: "name" },
@@ -76,6 +77,7 @@ const Table = () => {
             ))}
           </tr>
         </thead>
+
         <tbody>
           {data.map((row) => (
             <tr role="row" key={row.id}>
